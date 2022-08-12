@@ -1,0 +1,14 @@
+asrs.csv
+
+- contains participant level data on responses to the ASRS questionnaire. The questionnaire has two subscales. Column headers are self-explanatory. Reference for ASRS in Hampsey et al (2019)
+
+microsaccades_trials.csv
+
+- contains trial level data on microsacccade counts. Columns are
+
+filename: contains participant number and trial number
+N: microsaccade count (an integer, can be 0)
+trial_length: in seconds
+
+
+details in Hampsey et al (2019)

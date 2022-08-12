@@ -1,0 +1,64 @@
+This is a codebook for the data in the 'refined' folder.
+
+
+
+
+CaffCo Questionnaire
+
+Daily amount of caffeine estimate:
+0, 1/30, 2/30, 1/7, 3/7, 5.5/7, 1, 2.5, 4.5, 6
+
+Tea:
+Green = 31mg
+Black = 57mg
+Iced = 3mg
+De caff = 4.7mg
+
+Coffee:
+Instant powder – 83mg
+Plunger/drip – 100mg
+Single espresso – 120mg
+Double espresso – 210mg
+Decaf instant powder – 1.9mg
+Iced – 120mg
+
+Chocolate:
+Milk small = 10mg
+Milk large = 40mg
+Dark small = 30mg
+Dark large = 120mg
+Cocoa – 2mg
+
+Cola:
+Regular – 10mg per 100ml
+Diet – 14mg per 100ml
+Reg glass – 25mg
+Reg can – 35mg
+
+Reg bottle – 60mg
+Diet glass = 35mg
+Diet can = 42mg
+Diet bottle = 84mg
+
+Energy drinks:
+Energy shot – 80mg
+30mg per 100ml
+Small can – 75mg
+Small bottle – 105mg
+Large can = 150mg
+
+RTDs:
+15mg per 100ml
+Small – 45mg
+Bottle – 52mg
+
+Sports supplements:
+Pre-workout – 200mg
+Sports gels – 75mg
+
+Caffeine tablets:
+50mg
+100mg
+200mg
+
+
