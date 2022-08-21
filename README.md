@@ -48,7 +48,8 @@ This project was coded using R. This project contains the following files and fo
 
 If you would like to run the scripts, **please first run the R Project file titled "caffeine_and_ADHD_dissertation.Rproj"**
 
-The scripts should ideally be run sequentially, in order of their numbers (i.e., "001_script.R" before "002_script.R").
+The scripts should ideally be run sequentially, in order of their numbers (i.e., "001_ppt_script.R" before "002_caffco_script.R").
+Do not clear the data between scripts. The exception to this is the "microsacc_script.R", which should be run separately with environment cleared.
 
 ## References
 
