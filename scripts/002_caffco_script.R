@@ -9,7 +9,7 @@ df_caffco <- head(df_caffco,-1)
 
 #deleting unnecesary columns 
 df_caffco <- df_caffco %>% 
-  select(-UTC.Timestamp, -UTC.Date, -Local.Timestamp,-Participant.Private.ID, 
+  dplyr::select(-UTC.Timestamp, -UTC.Date, -Local.Timestamp,-Participant.Private.ID, 
          -Local.Timezone, -Local.Date, -Experiment.ID,-Task.Name, 
          -Experiment.Version, -Repeat.Key, -Schedule.ID, 
          -Participant.Starting.Group, -Participant.Status, 

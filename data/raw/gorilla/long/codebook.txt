@@ -1,4 +1,4 @@
-This is a codebook for the data in the 'refined' folder.
+This is a codebook for the data in the 'raw' folder.
 
 
 

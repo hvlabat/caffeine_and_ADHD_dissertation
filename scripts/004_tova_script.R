@@ -11,7 +11,7 @@ df_tova_pre <- head(df_tova_pre,-1)
 
 #Cleaning up df
 df_tova_pre <- df_tova_pre %>%
-  select(Participant.Public.ID,
+  dplyr::select(Participant.Public.ID,
          Zone.Name,
          Zone.Type,
          Reaction.Time,
@@ -110,7 +110,7 @@ df_tova_post <- head(df_tova_post,-1)
 
 #Cleaning up df
 df_tova_post <- df_tova_post %>%
-  select(Event.Index,
+  dplyr::select(Event.Index,
          Participant.Public.ID,
          Zone.Name,
          Zone.Type,

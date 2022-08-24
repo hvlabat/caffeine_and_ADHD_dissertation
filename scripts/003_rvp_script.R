@@ -11,7 +11,7 @@ df_rvp_pre <- head(df_rvp_pre,-1)
 
 #Cleaning up df
 df_rvp_pre <- df_rvp_pre %>%
-  select(Event.Index,
+  dplyr::select(Event.Index,
          Participant.Public.ID,
          Zone.Name,
          Zone.Type,
@@ -113,7 +113,7 @@ df_rvp_post <- head(df_rvp_post,-1)
 
 #Cleaning up df
 df_rvp_post <- df_rvp_post %>%
-  select(Event.Index,
+  dplyr::select(Event.Index,
          Participant.Public.ID,
          Zone.Name,
          Zone.Type,

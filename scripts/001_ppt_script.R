@@ -13,7 +13,7 @@ df_asrs <- head(df_asrs,-1)
 
 #Cleaning up df
 df_asrs <- df_asrs %>%
-  select(Participant.Public.ID,
+  dplyr::select(Participant.Public.ID,
          response.1.1.quantised,
          response.1.2.quantised,
          response.1.3.quantised,
@@ -61,7 +61,7 @@ p <- ggplot(df_asrs,aes(x=asrs))
 p+geom_density(kernel="gaussian")
 
 #Tidying df_asrs
-df_asrs <- select(df_asrs,ppt,asrs)
+df_asrs <- dplyr::select(df_asrs,ppt,asrs)
 
 #Merging asrs and ppt dfs
 df_ppt <- merge(df_ppt,df_asrs)

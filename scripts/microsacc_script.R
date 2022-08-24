@@ -5,7 +5,7 @@ library(here)
 library(tidyverse)
 
 #load the data
-df_ms <- read.csv(here("data","raw","sacc","microsaccades_trial.csv"))
+df_ms <- read.csv(here("data","raw","microsacc","microsaccades_trial.csv"))
 
 #microsaccdes per second
 ms_per_sec <- df_ms$N/df_ms$trial_length
@@ -42,7 +42,7 @@ df_ms %>% group_by(trial) %>%
   summarise(mean_ms_per_sec=mean(ms_per_sec))
 
 #import asrs.csv which contains participant ASRS scores
-df_ppt_asrs <- read.csv(here("data","raw","sacc","asrs.csv"))
+df_ppt_asrs <- read.csv(here("data","raw","microsacc","asrs.csv"))
 
 #rename: change column/variable names to something short
 df_ppt_asrs <- df_ppt_asrs %>% rename(inattn=Inattention.subscale) %>% 
@@ -65,44 +65,16 @@ df_merged <- rename(df_merged,Condition=cond)
 df_merged$Condition <- ifelse(df_merged$Condition=="pre","Pre-Caffeine","Post-Caffeine")
 
 #plotting the result, showing asrs score against microsaccade rate
-p <- ggplot(df_merged,aes(x=total_asrs,y=mean_ms_per_sec,color=Condition,fill=Condition))
+ggscatter(data=df_merged,
+          x="total_asrs",y="mean_ms_per_sec",
+          color="Condition",palette=c("#E69F00","#56B4E9"),
+          add="reg.line",conf.int=TRUE,
+          ylab="Mean Microsaccades per second",xlab="ASRS Score",legend="right")
 
-# Non-colourblind palette
-p+geom_point()+
-  geom_smooth(method=lm)+
-  labs(x="ASRS Score", y="Mean Microsaccades per second")+
-  scale_colour_manual(values=c("#E13A3F","#36B2EA"))+
-  scale_fill_manual(values=c("#E13A3F","#36B2EA"))+
-  theme(legend.position = c(0.85, 0.15),
-        text=element_text(size=20),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = "black"))
+plot_microsacc <- ggscatter(data=df_merged,
+                            x="total_asrs",y="mean_ms_per_sec",
+                            color="Condition",palette=c("#E69F00","#56B4E9"),
+                            add="reg.line",conf.int=TRUE,
+                            ylab="Mean Microsaccades per second",xlab="ASRS Score",legend="right")
 
-# Colourblind palette
-p+geom_point()+
-  geom_smooth(method=lm)+
-  labs(x="ASRS Score", y="Mean Microsaccades per second")+
-  scale_colour_manual(values=c("#D55E00","#0072B2"))+
-  scale_fill_manual(values=c("#D55E00","#0072B2"))+
-  theme(legend.position = c(0.85, 0.15),
-        text=element_text(size=20),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = "black"))
-
-plot_fig <-p+geom_point()+
-  geom_smooth(method=lm)+
-  labs(x="ASRS Score", y="Mean Microsaccades per second")+
-  scale_colour_manual(values=c("#D55E00","#0072B2"))+
-  scale_fill_manual(values=c("#D55E00","#0072B2"))+
-  theme(legend.position = c(0.85, 0.15),
-        text=element_text(size=20),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = "black"))
-
-ggsave(here("outputs","microsacc.png"),plot=plot_fig,width=9,height=7)
+ggsave(here("outputs","microsacc.png"),plot=plot_microsacc,width=10,height=4)
