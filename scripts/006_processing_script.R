@@ -99,23 +99,27 @@ summary(full)
 #Finding ideal sample size for 'reduced', where u=number of coefficiences
 #v = n − u − 1
 #Thus n = v + u + 1, where n is the sample size
-#f2=0.15 is medium effect size, f2=0.02 is small effect size
+#f2=0.35 is large effect size,0.15 is medium effect size,0.02 is small effect size
+pwr.f2.test(u=3,f2=0.35,sig.level=0.05,power=0.8)
+#v=31.3129
+#Thus n>35
 pwr.f2.test(u=3,f2=0.15,sig.level=0.05,power=0.8)
 #v=72.70583
-#Thus n=76 for significance
+#Thus n>76 for significance
 pwr.f2.test(u=3,f2=0.02,sig.level=0.05,power=0.8)
-#Thus n=549
+#Thus n>549
 
 #Testing actual effect size
 pwr.f2.test(u=3,v=59,sig.level=0.05,power=0.8)
 #f2=0.185, which is a slightly larger-than-medium size
 
 #Testing ideal sample size for coef of 7 (full model)
+pwr.f2.test(u=7,f2=0.35,sig.level=0.05,power=0.8)
+#n>48
 pwr.f2.test(u=7,f2=0.15,sig.level=0.05,power=0.8)
-#n=103
-#With f2 of 0.02
+#n>103
 pwr.f2.test(u=7,f2=0.02,sig.level=0.05,power=0.8)
-#n=725
+#n>725
 
 
 gqtest(reduced) #Testing homoscedasticity
