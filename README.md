@@ -10,15 +10,13 @@ The data used in this project comes from the Gorilla.sc experiment linked to thi
 
 The Gorilla.sc data is from the consent form, Iowa Gambling Task (IGT), Rapid Visual information Processing test (RVP), Stop Signal Rection Task (SSRT), Test of Variables of Attention (TOVA), Caffeine Consumption (CaffCo) questionnaire, Adult ADHD Self-Report Scale (ASRS), and debrief form.
 
-The information of use is from the four tests (RVP, TOVA, SSRT, IGT), which contained information on:
+The information of use is from two tests (RVP, TOVA), which contained information on:
 
--   Reaction/response time (RVP, TOVA, SSRT)
+-   Reaction/response time (RVP, TOVA)
 
--   Commission Errors (responding when they shouldn't respond) (RVP, TOVA, SSRT)
+-   Commission Errors (responding when they shouldn't respond) (RVP, TOVA)
 
--   Omission Errors (not responding when they should) (RVP, TOVA, SSRT)
-
--   Riskiness (IGT)
+-   Omission Errors (not responding when they should) (RVP, TOVA)
 
 ## Contents
 
@@ -28,8 +26,6 @@ This project was coded using R. This project contains the following files and fo
 
 **".Rhistory"** - Contains a history of the commands entered, generally unimportant.
 
-**".Rprofile"** - USed to set options and environment variables, set-up by renv to maintain version control
-
 **"data"** - Contains the **"raw"**" data used in this project, the source of which is outlined above. The **"refined"**" data folder contains the processed data from this project, described below, and a **"codebook.txt"** describing the nature of the each data vector.
 
 **"scripts"** - Contains the scripts used to process the raw data into the outputs available in **"outputs"**.
@@ -38,11 +34,7 @@ This project was coded using R. This project contains the following files and fo
 
 **"caffeine_and_ADHD_dissertation.Rproj"** - The R Project file of this project. Must be run if the scripts in **"docs"** are to work correctly.
 
-**"README.md" / "README.html"** - This file, in different formats.
-
-**"renv"** - A package-management system, used to ensure the isolation, portability, and reproducibility of this project. This is the R Studio updated version of packrat.
-
-**"renv.lock"** - Contains data on the packages stored in renv. Open this in rstudio to view the packages.
+**"README.md"** - This file.
 
 ## Instructions
 
